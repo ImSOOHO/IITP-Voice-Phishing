@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # 환경 설정
-CHROME_PATH = 'C:/Users/ben76/Desktop/HLI 연구실/보이스피싱 연구/크롤링 코드/chromedriver.exe'
+CHROME_PATH = '크롬드라이버 경로'
 BASE_URL    = "https://www.fss.or.kr"
 LIST_URL    = (
     BASE_URL +
@@ -108,3 +108,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
