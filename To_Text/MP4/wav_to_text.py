@@ -6,9 +6,9 @@ import whisper
 
 # ====== Path ======
 TRIM_DIR                = "/home/gaeun0112/sooho_work/data/experiment/TRIM_WAV"
-TRIM_NOBEEP_DIR         = "/home/gaeun0112/sooho_work/data/experiment/NO_BEEP_WAV"
 TRIM_OUT_JSON           = "/home/gaeun0112/sooho_work/data/experiment/new_treansform_data/trim_test.json"
-TRIM_NOBEEP_OUT_JSON    = "/home/gaeun0112/sooho_work/data/experiment/new_treansform_data/trim_nobeep_test.json"
+# TRIM_NOBEEP_DIR         = "/home/gaeun0112/sooho_work/data/experiment/NO_BEEP_WAV"
+# TRIM_NOBEEP_OUT_JSON    = "/home/gaeun0112/sooho_work/data/experiment/new_treansform_data/trim_nobeep_test.json"
 
 # ===== Whisper ======
 model = whisper.load_model("large", device="cuda:3")
@@ -66,7 +66,7 @@ def transcribe_dir(dir_path: str, out_json_path: str):
 
 if __name__ == "__main__":
     transcribe_dir(TRIM_DIR, TRIM_OUT_JSON)
-    transcribe_dir(TRIM_NOBEEP_DIR, TRIM_NOBEEP_OUT_JSON)
+    # transcribe_dir(TRIM_NOBEEP_DIR, TRIM_NOBEEP_OUT_JSON)
 
 
 
