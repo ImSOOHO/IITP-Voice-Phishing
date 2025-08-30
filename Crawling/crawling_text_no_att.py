@@ -8,20 +8,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# 설정
-CHROMEDRIVER_PATH = r'C:\Users\ben76\Desktop\HLI 연구실\보이스피싱 연구\크롤링 코드\chromedriver.exe'
-BASE_URL          = "https://www.fss.or.kr"
-LIST_URL_TMPL     = (
-    BASE_URL +
-    "/fss/bbs/B0000059/list.do?"
-    "menuNo=200359&bbsId=&viewType=&cl1Cd=&pageIndex={}&"
-    "sdate=&edate=&searchCnd=1&searchWrd="
-)
-OUTPUT_DIR      = r"C:\Users\ben76\Desktop\HLI 연구실\보이스피싱 연구\크롤링 코드"
-JSON_FOLDER     = os.path.join(OUTPUT_DIR, "json_file")
-os.makedirs(JSON_FOLDER, exist_ok=True)
-MERGED_JSON_PATH = os.path.join(JSON_FOLDER, "text_to_text.json")
-
 def create_driver():
     opts = Options()
     # opts.add_argument("--headless")
@@ -95,3 +81,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
