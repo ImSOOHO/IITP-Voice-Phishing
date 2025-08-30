@@ -10,18 +10,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# 환경 설정
-CHROME_PATH = '크롬드라이버 경로'
-BASE_URL    = "https://www.fss.or.kr"
-LIST_URL    = (
-    BASE_URL +
-    "/fss/bbs/B0000203/list.do?"
-    "menuNo=200686&bbsId=&cl1Cd=&pageIndex={}&"
-    "sdate=&edate=&searchCnd=1&searchWrd="
-)
-VIDEO_DIR   = './videos'
-os.makedirs(VIDEO_DIR, exist_ok=True)
-
 # 드라이버
 def create_driver():
     opts = Options()
@@ -108,4 +96,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
