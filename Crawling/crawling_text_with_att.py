@@ -6,21 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-CHROMEDRIVER_PATH = r'C:\Users\ben76\Desktop\HLI 연구실\보이스피싱 연구\크롤링 코드\chromedriver.exe'
-BASE_URL = "https://www.fss.or.kr"
-LIST_URL_TMPL = BASE_URL + "/fss/bbs/B0000059/list.do?menuNo=200359&pageIndex={}&searchCnd=1&searchWrd="
-DOWNLOAD_DIR = os.path.abspath("./attachments")
-os.makedirs(DOWNLOAD_DIR, exist_ok=True)
-
-opts = Options()
-prefs = {
-    "download.default_directory": DOWNLOAD_DIR,
-    "download.prompt_for_download": False,
-    "plugins.always_open_pdf_externally": True,
-}
-opts.add_experimental_option("prefs", prefs)
-opts.add_argument("--window-size=1920,1080")
-
 def create_driver():
     return webdriver.Chrome(service=Service(CHROMEDRIVER_PATH), options=opts)
 
@@ -77,3 +62,4 @@ def scrape_attachments():
 
 if __name__ == "__main__":
     scrape_attachments()
+
