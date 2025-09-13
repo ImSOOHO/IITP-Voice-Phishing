@@ -1,4 +1,4 @@
-# IITP-Voice-Phishing
+# IITP-Voice-Phishing(진행중)
 
 ## 프로젝트 목표
 * 금융 감독원의 게시글(본문 및 첨부파일)을 활용하여 보이스피싱 탐지를 위한 Vector DB를 구축하는 것
